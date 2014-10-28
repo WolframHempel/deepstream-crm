@@ -1,6 +1,7 @@
 define({
 	baseUrl: '../',
 	paths:{
-		'jquery': 'bower_components/jquery/dist/jquery.min.js'
+		'golden-layout': 'bower_components/golden-layout/dist/goldenlayout.min',
+		'jquery': 'bower_components/jquery/dist/jquery.min'
 	}
 });
