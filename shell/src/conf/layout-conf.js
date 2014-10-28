@@ -12,13 +12,13 @@ define({
 			type: 'component',
 			componentName: 'asyncLoader',
 			componentState: {
-				url: 'components/userlist'
+				url: 'components/userlist/userlist'
 			}
 		},{
 			type: 'component',
 			componentName: 'asyncLoader',
 			componentState: {
-				url: 'components/userdetail'
+				url: 'components/userdetail/userdetail'
 			}
 		}]
 	}]
