@@ -1,9 +1,12 @@
 define(function( require ){
 
-	var ko = require( 'ko' );
+	var ko = require( 'ko' ),
+		deepstream = require( 'services/deepstream' ),
+		getObservable = require( 'common/deepstream-ko/get-observable' );
 
 	var UserListViewModel = function( container, state ) {
-		this.name = ko.observable( 'Wolfram' );
+		this._record = deepstream.getRecord( 'user/wolfram' );
+		this.name = getObservable( this._record, 'firstname' );
 	};
 
 	return UserListViewModel;
