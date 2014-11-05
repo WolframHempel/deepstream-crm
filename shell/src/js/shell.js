@@ -3,11 +3,16 @@ define(function( require ){
 		layoutConf = require( '../conf/layout-conf'),
 		AsyncLoaderComponent = require( './AsyncLoaderComponent' );
 
+	require( 'css!../css/shell.css' );
+
 	var Shell = function() {
 		this._templates = {};
 
 		this.layout = new GoldenLayout( layoutConf );
 		this.layout.registerComponent( 'asyncLoader', AsyncLoaderComponent );
+
+		define( 'services/layout', this.layout );
+		define( 'services/eventhub', this.layout.eventHub );
 		this.layout.init();
 	};
 

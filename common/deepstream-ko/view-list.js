@@ -62,19 +62,16 @@ define(function( require ){
 		}
 	};
 
-	ViewList.prototype.getList = function()
-	{
+	ViewList.prototype.getList = function() {
 		return this._list;
 	};
 
-	ViewList.prototype.empty = function()
-	{
+	ViewList.prototype.empty = function() {
 		this._entries = {};
 		this.entries([]);
 	};
 
-	ViewList.prototype.callOnEntries = function( methodName, params )
-	{
+	ViewList.prototype.callOnEntries = function( methodName, params ) {
 		var entries = this.entries();
 
 		for( var i = 0; i < entries.length; i++ )

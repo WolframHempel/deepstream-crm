@@ -1,3 +1,13 @@
-.userlist h2{
-	color: red;
+.userlist li{
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.userlist li:hover{
+	background: : #aaa;
+}
+
+.userlist li.active{
+	cursor: pointer;
 }

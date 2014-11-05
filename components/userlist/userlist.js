@@ -9,7 +9,7 @@ define(function( require ){
 	var UserList = function( container, state ) {
 		this.viewmodel = new UserListViewModel( container, state );
 		container.getElement().html( userListTemplate );
-		ko.applyBindings( this.viewmodel, this.template );
+		ko.applyBindings( this.viewmodel, container.getElement()[0] );
 	};
 
 	return UserList;
