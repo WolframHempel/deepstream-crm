@@ -14,16 +14,14 @@ define(function( require ){
 	};
 
 	UserListViewModel.prototype.addUser = function() {
-		var recordName = 'user/' + deepstream.getUid(),
-			entries = this._viewList.getList().getEntries();
+		var recordName = 'user/' + deepstream.getUid();
 
 		deepstream.getRecord( recordName ).set({
 			firstname: 'new',
 			lastname: 'user'
 		});
 
-		entries.push( recordName );
-		this._viewList.getList().setEntries( entries );
+		this._viewList.getList().addEntry( recordName );
 	};
 
 	return UserListViewModel;

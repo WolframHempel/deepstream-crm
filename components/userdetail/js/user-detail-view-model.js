@@ -3,7 +3,7 @@ define(function( require ){
 		deepstream = require( 'services/deepstream' ),
 		getObservable = require( 'common/deepstream-ko/get-observable' ),
 		eventHub = require( 'services/eventhub' );
-window.deepstream = deepstream;
+
 	var UserDetailViewModel = function( recordName ) {
 		this._record = deepstream.getAnonymousRecord();
 		this.firstname = getObservable( this._record, 'firstname' );
