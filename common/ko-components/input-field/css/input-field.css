@@ -1,0 +1,19 @@
+input-field{
+	display: inline-block;
+}
+
+input-field label{
+	font: 10px Arial, sans-serif;
+	color: #666;
+	display: block;
+	padding-bottom: 1px;
+}
+
+input-field input{
+	outline: none;
+	border: 1px solid #ccc;
+}
+
+input-field input:focus{
+	border-color: orange;
+}

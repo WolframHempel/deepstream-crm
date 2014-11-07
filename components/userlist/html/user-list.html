@@ -1,6 +1,7 @@
 <div class="userlist">
 	<ul data-bind="template:{ name: 'user-list-entry', foreach: people }"></ul>
-	<div data-bind="click:addUser">
-		Add User
+	<div data-bind="click:addUser" class="add-user">
+		<span class="fa fa-plus"></span>
+		<span class="title">Add User</span>
 	</div>
 </div>

@@ -1,4 +1,26 @@
 <div class="user-detail">
-	<input type="text" data-bind="value:firstname" />
-	<input type="text" data-bind="value:lastname" />
+	<div data-bind="ifnot:isUserSelected" class="no-user-selected">
+		<span class="fa fa-arrow-left"></span>
+		Please select a user
+	</div>
+	<ul data-bind="if:isUserSelected">
+		<li>
+			<h2>Name</h2>
+		</li>
+		<li>
+			<input-field params="{ value: firstname, name: 'Firstname' }"></input-field>
+			<input-field params="{ value: lastname, name: 'Lastname' }"></input-field>
+		</li>
+		<li>
+			<h2>Address</h2>
+		</li>
+		<li>
+			<input-field params="{ value: streetName, name: 'Street' }"></input-field>
+			<input-field params="{ value: streetNumber, name: 'Nr' }"></input-field>
+		</li>
+		<li>
+			<input-field params="{ value: postcode, name: 'Postcode' }"></input-field>
+			<input-field params="{ value: city, name: 'City' }"></input-field>
+		</li>
+	</ul>
 </div>

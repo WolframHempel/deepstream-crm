@@ -11,10 +11,16 @@ define(function( require ){
 		this._record = deepstream.getRecord( recordName );
 		this.firstname = getObservable( this._record, 'firstname' );
 		this.lastname = getObservable( this._record, 'lastname' );
+		this.isSelected = ko.observable( false );
+		eventHub.on( 'userSelected', this._onUserSelected, this );
 	};
 
 	UserListEntry.prototype.selectUser = function() {
 		eventHub.emit( 'userSelected', this._record.getName() );
+	};
+
+	UserListEntry.prototype._onUserSelected = function( userRecordName ) {
+		this.isSelected( this._record.getName() === userRecordName );
 	};
 	
 	return UserListEntry;

@@ -8,6 +8,20 @@
 	background: : #aaa;
 }
 
-.userlist li.active{
+.userlist li.selected{
+	background: orange;
+	color: #fff;
+	font-weight: bold;
+}
+
+.userlist .add-user{
+	text-align: center;
+	padding: 10px;
 	cursor: pointer;
+	background: #ccc;
+	font-size: 16px;
+}
+
+.userlist .add-user:hover{
+	background: orange;
 }

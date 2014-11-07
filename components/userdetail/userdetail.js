@@ -5,6 +5,7 @@ define(function( require ){
 		UserDetailViewModel = require( './js/user-detail-view-model' );
 
 	require( 'css!./css/user-detail.css' );
+	require( 'common/ko-components/input-field/input-field' );
 
 	var UserDetail = function( container, state ) {
 		this.viewmodel = new UserDetailViewModel( container, state );
