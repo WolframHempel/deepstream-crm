@@ -119,7 +119,7 @@ define(function( require ){
 		{
 			if( !this._entries[ entries[ i ] ] )
 			{
-				this._entries[ entries[ i ] ] = new this._viewModel( entries[ i ] );
+				this._entries[ entries[ i ] ] = new this._viewModel( entries[ i ], this );
 			}
 
 			viewModels.push( this._entries[ entries[ i ] ] );

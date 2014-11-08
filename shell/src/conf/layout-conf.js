@@ -3,7 +3,7 @@ define({
 		hasHeaders: false
 	},
 	dimensions:{
-		borderWidth: 2
+		borderWidth: 1
 	},
 	content:[{
 		type: 'row',

@@ -1,8 +1,11 @@
 <div class="user-detail">
+	<!-- ko ifnot:isUserSelected -->
 	<div data-bind="ifnot:isUserSelected" class="no-user-selected">
-		<span class="fa fa-arrow-left"></span>
+		<div class="tip"></div>
 		Please select a user
 	</div>
+	<!-- /ko -->
+	<!-- ko if:isUserSelected -->
 	<ul data-bind="if:isUserSelected">
 		<li>
 			<h2>Name</h2>
@@ -23,4 +26,5 @@
 			<input-field params="{ value: city, name: 'City' }"></input-field>
 		</li>
 	</ul>
+	<!-- /ko -->
 </div>
