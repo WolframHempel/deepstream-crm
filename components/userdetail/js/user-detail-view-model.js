@@ -5,7 +5,7 @@ define(function( require ){
 		eventHub = require( 'services/eventhub' );
 
 	var UserDetailViewModel = function( recordName ) {
-		this._record = deepstream.getAnonymousRecord();
+		this._record = deepstream.record.getAnonymousRecord();
 		eventHub.on( 'userSelected', this._setActiveUser, this );
 		this.isUserSelected = ko.observable( false );
 

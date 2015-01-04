@@ -8,7 +8,7 @@ define(function( require ){
 	require( 'shell' ).registerTemplate( 'user-list-entry', template );
 
 	var UserListEntry = function( recordName, viewList ) {
-		this._record = deepstream.getRecord( recordName );
+		this._record = deepstream.record.getRecord( recordName );
 		this._viewList = viewList;
 
 		this.firstname = getObservable( this._record, 'firstname' );
@@ -21,7 +21,7 @@ define(function( require ){
 	};
 
 	UserListEntry.prototype.selectUser = function() {
-		eventHub.emit( 'userSelected', this._record.getName() );
+		eventHub.emit( 'userSelected', this._record.name );
 	};
 
 	UserListEntry.prototype.onDeleteClick = function( viewModel, e ) {
@@ -31,8 +31,8 @@ define(function( require ){
 	};
 
 	UserListEntry.prototype._deleteEntry = function() {
-		this._record.remove();
-		this._viewList.getList().removeEntry( this._record.getName() );
+		this._record.delete();
+		this._viewList.getList().removeEntry( this._record.name );
 	};
 
 	UserListEntry.prototype._onUserSelected = function( userRecordName ) {

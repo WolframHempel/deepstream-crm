@@ -9,14 +9,14 @@ define(function( require ){
 	require( 'shell' ).registerTemplate( 'user-list', template );
 	
 	var UserListViewModel = function( container, state ) {
-		this._viewList = new ViewList( UserListEntryViewModel, deepstream.getList( 'users' ) );
+		this._viewList = new ViewList( UserListEntryViewModel, deepstream.record.getList( 'users' ) );
 		this.people = this._viewList.entries;
 	};
 
 	UserListViewModel.prototype.addUser = function() {
 		var recordName = 'user/' + deepstream.getUid();
 
-		deepstream.getRecord( recordName ).set({
+		deepstream.record.getRecord( recordName ).set({
 			firstname: 'new',
 			lastname: 'user'
 		});

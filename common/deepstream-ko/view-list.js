@@ -13,7 +13,7 @@ define(function( require ){
 	 */
 	var ViewList = function( viewModel, list ) {
 		this._list = list;
-		this._list.subscribe( this.updateEntries, this );
+		this._list.subscribe( this.updateEntries.bind( this ) );
 		this._standardTemplate = null;
 		this._emptyTemplate = null;
 		this._isEmpty = true;

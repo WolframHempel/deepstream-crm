@@ -1,7 +1,9 @@
 require( [ 
 	'./src/conf/require-conf.js', 
-	'./src/conf/general-conf.js'], 
-	function( requireConfig, generalConfig ){
+	'./src/conf/general-conf.js',
+	'../bower_components/deepstream.io-client-js/dist/deepstream.js'
+	], 
+	function( requireConfig, generalConfig, deepstream ){
 	
 	/**
 	 * Configure requirejs
@@ -11,8 +13,9 @@ require( [
 	/**
 	 * Connect to deepstream
 	 */
-	var deepstreamClient = new DeepstreamClient( generalConfig.deepstreamUrl );
-	deepstreamClient.setPersistDefault( false );
+	var deepstreamClient = deepstream( generalConfig.deepstreamUrl );
+	deepstreamClient.login({ username: 'Wolfram' });
+
 	define( 'services/deepstream', deepstreamClient );
 
 	require( ['./shell/src/js/shell' ], function( Shell ){
