@@ -36,7 +36,7 @@ define(function( require ){
 	};
 
 	UserListEntry.prototype._onUserSelected = function( userRecordName ) {
-		this.isSelected( this._record.name() === userRecordName );
+		this.isSelected( this._record.name === userRecordName );
 	};
 	
 	return UserListEntry;
