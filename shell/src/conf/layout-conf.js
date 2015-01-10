@@ -20,6 +20,12 @@ define({
 			componentState: {
 				url: 'components/userdetail/userdetail'
 			}
+		},{
+			type: 'component',
+			componentName: 'asyncLoader',
+			componentState: {
+				url: 'components/rfq-ticket/rfq-ticket'
+			}
 		}]
 	}]
 });
