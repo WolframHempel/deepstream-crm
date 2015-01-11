@@ -1,0 +1,56 @@
+button.execute-button{
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+
+@-webkit-keyframes flash-up {
+  0%   { color: #08A152; }
+  100% { color: #222; }
+}
+
+@-webkit-keyframes flash-down {
+  0%   { color: #EB3715; }
+  100% { color: #222; }
+}
+
+button.execute-button > *{
+	position: absolute;
+}
+
+button.execute-button.up sub,
+button.execute-button.up em,
+button.execute-button.up sup{
+	-webkit-animation: flash-up 800ms;
+}
+
+button.execute-button.down sub,
+button.execute-button.down em,
+button.execute-button.down sup{
+	-webkit-animation: flash-down 800ms;
+}
+
+button.execute-button label{
+	top: 10px;
+	left: 10px;
+	font-size: 10px;
+}
+
+button.execute-button sub{
+	bottom: 20px;
+	left: 10px;
+	font-size: 12px;
+}
+
+button.execute-button em{
+	bottom: 25px;
+	font-size: 30px;
+	left: 37px;
+}
+
+button.execute-button sup{
+	bottom: 32px;
+	left: 73px;
+	font-size: 11px;
+}
+

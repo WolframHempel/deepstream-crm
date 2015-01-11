@@ -1,0 +1,14 @@
+.countdown-timer{
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+.countdown-timer .remaining-time{
+	position: absolute;
+	font-size: 30px;
+	color: #222;
+	top: 42px;
+	width: 100%;
+	text-align: center;
+}

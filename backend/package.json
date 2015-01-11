@@ -1,0 +1,15 @@
+{
+  "name": "test-oms",
+  "version": "0.0.0",
+  "description": "just for demo purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wolfram Hempel",
+  "license": "MIT",
+  "dependencies": {
+  	"deepstream.io-client-js": "latest",
+  	"deepstream.io": "latest"
+  }
+}

@@ -1,0 +1,58 @@
+.rfq-ticket{
+	background: #fff;
+	height: 100%;
+}
+
+.rfq-ticket button{
+	cursor: pointer;
+}
+
+.rfq-ticket > *{
+	margin: 10px;
+}
+
+.rfq-ticket fieldset{
+	border: none;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.rfq-ticket .get-quote button,
+.rfq-ticket .confirmation button{
+	width: 320px;
+	padding: 10px;
+}
+
+.rfq-ticket .quoting > *{
+	float: left;
+	margin-right: 10px;
+}
+
+.rfq-ticket .setup input-field input{
+	width: 136px;
+}
+
+.rfq-ticket .confirmation *{
+	color: #222;
+}
+
+.rfq-ticket .confirmation h2{ 
+	font-weight: bold;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 5px;
+}
+
+.rfq-ticket .confirmation ul{
+	margin-bottom: 5px;
+}
+
+.rfq-ticket .confirmation li{
+	padding: 5px 0;
+}
+
+.rfq-ticket .confirmation li label{
+	display: inline-block;
+	width: 100px;
+	color: #888;
+}

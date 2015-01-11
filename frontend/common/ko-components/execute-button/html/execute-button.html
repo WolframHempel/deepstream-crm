@@ -1,0 +1,8 @@
+<button type="button" 
+		class="execute-button" 
+		data-bind="css:{ up: lastChange() === 'up', down: lastChange() === 'down'}, click: execute">
+	<label data-bind="text:label"></label>
+	<sub class="price-sub" data-bind="text:pricePartSub"></sub>
+	<em class="price-main" data-bind="text:pricePartMain"></em>
+	<sup class="price-super" data-bind="text:pricePartSuper"></sup>
+</button>

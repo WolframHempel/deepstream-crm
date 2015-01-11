@@ -1,0 +1,12 @@
+<li>
+	<div><label>Currency Pair</label><b data-bind="text:currencyPair"></b></div>//
+	<div><label>Amout</label><b data-bind="text:amount"></b></div>//
+	<div><label>State</label><b data-bind="text:state"></b></div>//
+	<div>
+		<label>Traded Price</label>
+		<b data-bind="format:{ value:tradedPrice, formatter:'toFixed', options: {digits: 5} }"></b>
+	</div>//
+	<div><label>Side</label><b data-bind="text:side"></b></div>//
+	<div><label>Trade Time</label><b data-bind="format:{ formatter: 'dateFromTimeStamp', value:tradeTime }"></b></div>
+	<span class="fa fa-remove remove" data-bind="click: deleteTrade"></span>
+</li>

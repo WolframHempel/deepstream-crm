@@ -1,0 +1,33 @@
+.trade-blotter li{
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+.trade-blotter li div{
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.trade-blotter li div label{
+	color: #888;
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.trade-blotter li div b{
+	font-weight: bold;
+	color: #222;
+}
+
+.trade-blotter span.remove{
+	position: relative;
+	float: right;
+	top: 2px;
+	right: 5px;
+	color: #AAA;
+	cursor: pointer;
+}
+
+.trade-blotter span.remove:hover{
+	color: #222;
+}

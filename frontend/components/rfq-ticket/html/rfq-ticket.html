@@ -1,0 +1,32 @@
+<div class="rfq-ticket">
+	<div class="setup">
+		<fieldset data-bind="enable: state() === 'initial'">
+			<input-field params="{ value: currencyPair, name: 'Currency Pair' }"></input-field>
+			<input-field params="{ value: amount, name: 'Amount' }"></input-field>
+		</fieldset>
+	</div>
+
+	<div class="execution">
+		<div class="get-quote" data-bind="visible:state() === 'initial'">
+			<button 
+				type="button" 
+				data-bind="click:getQuote, enable: currencyPair() && amount()"
+			>get quote</button>
+		</div>
+		<div class="quoting" data-bind="visible:state() === 'pricing'">
+			<execute-button params="{ side: 'bid', price: bidPrice, click: execute.bind( $data ) }"></execute-button>
+			<div data-bind="countdownTimer: { duration: rfqTimeout, trigger: timeoutTrigger }"></div>
+			<execute-button params="{ side: 'ask', price: askPrice, click: execute.bind( $data ) }"></execute-button>
+		</div>
+		<div class="confirmation" data-bind="visible:state() === 'complete'">
+			<h2>Trade confirmed</h2>
+			<ul>
+				<li><label>Currency Pair</label><span data-bind="text: currencyPair"></span></li>
+				<li><label>Amount</label><span data-bind="text: amount"></span></li>
+				<li><label>Traded price</label><span data-bind="text: tradedPrice"></span></li>
+				<li><label>Time</label><span data-bind="text: tradeTime"></span></li>
+			</ul>
+			<button type="button" data-bind="click:newRfq">New Trade</button>
+		</div>
+	</div>
+</div>
