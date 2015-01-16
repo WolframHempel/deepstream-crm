@@ -2,6 +2,7 @@ var Rfq = function( record ) {
 	this._record = record;
 	this._pricingDuration = 30000;
 
+	this._record.on( 'delete', this._stopPricing.bind( this ) );
 	this._record.set( 'state', 'initial' );
 	this._record.set( 'rfqTimeout', this._pricingDuration );
 	this._record.subscribe( 'state', this._onStateChange.bind( this ) );
@@ -39,7 +40,10 @@ Rfq.prototype._stopPricing = function() {
 
 Rfq.prototype._onPricingTimeout = function() {
 	this._stopPricing();
-	this._record.set( 'state', 'initial' );
+
+	if( this._record.get( 'state' ) === 'pricing' ) {
+		this._record.set( 'state', 'initial' );
+	}
 };
 
 Rfq.prototype._createPrice = function() {
